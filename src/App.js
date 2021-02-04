@@ -1,19 +1,32 @@
+import React from 'react';
 import './App.css';
-import Text from './Text';
-import Button from './Button';
+import Table from './components/Table';
+import ViewTrade from './components/ViewTrade';
 
-function App() {
-  return (
-    <div className="App">
+class App extends React.Component {
+  state = {
+    balls: [1,2],
+    view: true,
+    
+  }
+  render () {
+    const { view } = this.state;
+    return (
+      <div className="App">
       <header className="App-header">
-        <p>
-          Stock App book keeping
-        </p>
-        <Text />
-        <Button />
+      {view
+      ? <Table view={() => this.setState({ view: !view })} />
+      : <div>
+        <button onClick={() => this.setState({ view: true })}>Go Back</button>
+        <ViewTrade />
+        </div>
+        }
       </header>
+      <button onClick={() => {this.setState({ step2: !this.state.step2 })}} >Update State</button>
     </div>
-  );
+    )
+  }
 }
+
 
 export default App;
