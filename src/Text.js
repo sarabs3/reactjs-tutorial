@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Text = () => {
-    return <p>Hello, I am a text</p>
+    return <p>Count the ball</p>
 };
 
 export default Text;
