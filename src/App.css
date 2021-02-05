@@ -42,3 +42,18 @@
   border-radius: 3px;
   font-size: 16px;
 }
+.form {
+  border: 1px solid #ccc;
+  width: 40%;
+  margin: 20px auto;
+  padding: 20px 0;
+}
+.formItem {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+label {
+  font-size: 1rem;
+  margin: 0 5px;
+}
